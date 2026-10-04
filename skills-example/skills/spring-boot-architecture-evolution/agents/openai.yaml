@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spring Boot Architecture Evolution"
+  short_description: "Evolve Spring Boot architecture one justified step at a time"
+  default_prompt: "Assess this Spring Boot project's architecture level and recommend the smallest justified next step."

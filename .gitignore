@@ -1,0 +1,64 @@
+# Root ignores for the whole monorepo.
+# App-specific rules live in apps/backend/.gitignore and apps/frontend/.gitignore.
+
+# AGENTS
+# Local agent config and installed skills. The shared copy is skills-example/skills/.
+.claude*
+.codex*
+
+# Secrets & environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+# Spring Boot local overrides (DB/mail/OAuth credentials)
+**/src/main/resources/application-local.*
+**/src/main/resources/application-secret*.*
+
+# Dependencies (root-level pnpm workspace, if added later)
+node_modules/
+.pnpm-store/
+
+# Build output & caches (anchored to app roots so source folders such as
+# app/build/ or app/logs/ routes are never hidden)
+/apps/*/target/
+/apps/*/build/
+/apps/*/dist/
+/apps/*/out/
+/apps/*/.next/
+/apps/*/coverage/
+.turbo/
+*.tsbuildinfo
+.eslintcache
+
+# Java / JVM
+*.class
+hs_err_pid*
+replay_pid*
+
+# Logs
+/logs/
+/apps/*/logs/
+*.log
+
+# IDEs & editors
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+# WSL / Windows download metadata
+*:Zone.Identifier

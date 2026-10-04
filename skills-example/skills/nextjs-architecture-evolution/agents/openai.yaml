@@ -1,0 +1,4 @@
+interface:
+  display_name: "Next.js Architecture Evolution"
+  short_description: "Evolve Next.js frontend architecture one justified step at a time"
+  default_prompt: "Assess this Next.js app's architecture level and recommend the smallest justified next step."
